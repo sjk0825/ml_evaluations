@@ -1,0 +1,11 @@
+mlflow_setting:
+  tracking_uri: postgresql+psycopg2://account1:account1@172.18.0.2:5432/mlflow
+  experiment_name: evalset_version1
+  run_name: agent_system_ver2
+mlflow_evaluation:
+  scorers:
+    - CORRECTNESS
+    - IS_CONCISE
+    - IS_KOREAN
+data:
+  input: ./data/data_mlflow_ver1.json

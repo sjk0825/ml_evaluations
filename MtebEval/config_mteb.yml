@@ -1,0 +1,4 @@
+model_name: intfloat/multilingual-e5-small
+source_data: MTEBv2
+task: NanoArguAnaRetrieval
+prediction_folder: ./prediction

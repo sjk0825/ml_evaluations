@@ -1,0 +1,14 @@
+[
+    {
+        "inputs": {"question": "학동사거리 가는데 걸리는 시간은?"},
+        "expectations": {"expected_response": "35분"}
+    },
+    {
+        "inputs": {"question": "오늘 4시 날씨는?"},
+        "expectations": {"expected_response": "비"}
+    },
+    {
+        "inputs": {"question": "AA핸드폰 위치조정은?"},
+        "expectations": {"expected_response": "제공 기능 아님"}
+    }
+]

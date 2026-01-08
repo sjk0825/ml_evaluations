@@ -1,0 +1,5 @@
+mlflow
+flake8
+black
+openai
+psycopg2-binary
