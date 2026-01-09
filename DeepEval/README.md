@@ -15,4 +15,6 @@ $ (deepeval_env) python evaluation.py
 
 ### Run Examples
 <img width="1055" height="118" alt="image" src="https://github.com/user-attachments/assets/56ee12a5-6ea2-4084-851c-3aedfcbf32b5" />
+<img width="1473" height="407" alt="image" src="https://github.com/user-attachments/assets/3335eaad-c19a-44e8-94c0-0050fdbd4766" />
+
 
