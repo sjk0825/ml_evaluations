@@ -22,11 +22,6 @@ $ conda --version
 
 ### set environment
 ```
-$ echo 'export OPENAI_API_KEY="sk-xxxxxxxx"' >> ~/.bashrc
-$ source ~/.bashrc
-```
-
-###
-```
 $ export OPENAI_API_KEY="sk-proj-xxxxxx"
+$ source ~/.bashrc
 ```
