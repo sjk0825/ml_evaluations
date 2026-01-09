@@ -1,0 +1,10 @@
+data:
+  input: ./data/agent_log.jsonl
+deepeval:
+  evaluation_model: gpt-5-mini
+  evaluation_threshold: 0.7
+  evaluation_metrics: 
+    - planAdherenceMetric
+    - planQualityMetric
+    - stepEfficiencyMetric
+    - taskCompletionMetric
