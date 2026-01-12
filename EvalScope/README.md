@@ -10,7 +10,7 @@ $ (evalscope_env) pip install -r requirements.txt
 ### Run evaluation
 ```
 $ (evalscope_env) cd EvalScope
-$ (evalscope_env) python evaluation.py
+$ (evalscope_env) python evaluation_mQA.py
 ```
 
 ### View visualization
