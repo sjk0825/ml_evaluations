@@ -1,0 +1,10 @@
+task_config:
+  model: 'Qwen/Qwen2-0.5B-Instruct'
+  datasets:
+    - general_mcq
+  dataset_args:
+    general_mcq: 
+      local_path: ./data/data_ver1.jsonl
+      subset_list:
+        - example
+prediction_path: ./data/data_ver1.jsonl

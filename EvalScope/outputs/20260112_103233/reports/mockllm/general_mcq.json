@@ -1,0 +1,34 @@
+{
+    "name": "mockllm@general_mcq",
+    "dataset_name": "general_mcq",
+    "dataset_pretty_name": "General-MCQ",
+    "dataset_description": "A general multiple-choice question answering dataset for custom evaluation. For detailed instructions on how to use this benchmark, please refer to the [User Guide](https://evalscope.readthedocs.io/en/latest/advanced_guides/custom_dataset/llm.html#mcq).",
+    "model_name": "mockllm",
+    "score": 0.5,
+    "metrics": [
+        {
+            "name": "mean_acc",
+            "num": 2,
+            "score": 0.5,
+            "macro_score": 0.5,
+            "categories": [
+                {
+                    "name": [
+                        "default"
+                    ],
+                    "num": 2,
+                    "score": 0.5,
+                    "macro_score": 0.5,
+                    "subsets": [
+                        {
+                            "name": "example",
+                            "score": 0.5,
+                            "num": 2
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "analysis": "N/A"
+}

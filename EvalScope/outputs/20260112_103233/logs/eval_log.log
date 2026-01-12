@@ -1,0 +1,125 @@
+2026-01-12 10:32:33 - evalscope - INFO: Running with native backend
+2026-01-12 10:32:33 - evalscope - INFO: Dump task config to ./outputs/20260112_103233/configs/task_config_7cd000.yaml
+2026-01-12 10:32:33 - evalscope - INFO: {
+    "model": "MockLLM",
+    "model_id": "mockllm",
+    "model_args": {
+        "revision": "master",
+        "precision": "torch.float16"
+    },
+    "model_task": "text_generation",
+    "chat_template": null,
+    "datasets": [
+        "general_mcq"
+    ],
+    "dataset_args": {
+        "general_mcq": {
+            "name": "general_mcq",
+            "dataset_id": "./data/data_ver1.jsonl",
+            "output_types": [
+                "generation"
+            ],
+            "subset_list": [
+                "example"
+            ],
+            "default_subset": "default",
+            "few_shot_num": 0,
+            "few_shot_random": false,
+            "train_split": "dev",
+            "eval_split": "val",
+            "prompt_template": "回答下面的单项选择题，请选出其中的正确答案。你的回答的全部内容应该是这样的格式：\"答案：[LETTER]\"（不带引号），其中 [LETTER] 是 {letters} 中的一个。\n\n问题：{question}\n选项：\n{choices}\n",
+            "few_shot_prompt_template": null,
+            "system_prompt": null,
+            "query_template": null,
+            "pretty_name": "General-MCQ",
+            "description": "A general multiple-choice question answering dataset for custom evaluation. For detailed instructions on how to use this benchmark, please refer to the [User Guide](https://evalscope.readthedocs.io/en/latest/advanced_guides/custom_dataset/llm.html#mcq).",
+            "tags": [
+                "MCQ",
+                "Custom"
+            ],
+            "filters": null,
+            "metric_list": [
+                "acc"
+            ],
+            "aggregation": "mean",
+            "shuffle": false,
+            "shuffle_choices": false,
+            "force_redownload": false,
+            "review_timeout": null,
+            "extra_params": {},
+            "sandbox_config": {}
+        }
+    },
+    "dataset_dir": "/root/.cache/modelscope/hub/datasets",
+    "dataset_hub": "modelscope",
+    "repeats": 1,
+    "generation_config": {
+        "batch_size": 1,
+        "max_tokens": 2048,
+        "top_p": 1.0,
+        "temperature": 1.0,
+        "do_sample": false,
+        "top_k": 50,
+        "n": 1
+    },
+    "eval_type": "llm_ckpt",
+    "eval_backend": "Native",
+    "eval_config": null,
+    "limit": null,
+    "eval_batch_size": 1,
+    "use_cache": null,
+    "rerun_review": false,
+    "work_dir": "./outputs/20260112_103233",
+    "no_timestamp": false,
+    "ignore_errors": false,
+    "debug": false,
+    "seed": 42,
+    "api_url": null,
+    "timeout": null,
+    "stream": null,
+    "judge_strategy": "auto",
+    "judge_worker_num": 1,
+    "judge_model_args": {},
+    "analysis_report": false,
+    "use_sandbox": false,
+    "sandbox_type": "docker",
+    "sandbox_manager_config": {},
+    "evalscope_version": "1.4.1"
+}
+2026-01-12 10:32:33 - evalscope - INFO: Start loading benchmark dataset: general_mcq
+2026-01-12 10:32:33 - evalscope - INFO: Start evaluating 1 subsets of the general_mcq: ['example']
+2026-01-12 10:32:33 - evalscope - INFO: Evaluating subset: example
+2026-01-12 10:32:33 - evalscope - INFO: Getting predictions for subset: example
+2026-01-12 10:32:33 - evalscope - INFO: Processing 2 samples, if data is large, it may take a while.
+2026-01-12 10:32:33 - evalscope - INFO: Loading model for prediction...
+2026-01-12 10:32:33 - evalscope - INFO: Model loaded successfully.
+2026-01-12 10:32:33 - evalscope - INFO: Predicting[general_mcq@example]:  100%| 2/2 [Elapsed: 00:00 < Remaining: 00:00, 210.93it/s]
+2026-01-12 10:32:33 - evalscope - INFO: Finished getting predictions for subset: example.
+2026-01-12 10:32:33 - evalscope - INFO: Getting reviews for subset: example
+2026-01-12 10:32:33 - evalscope - INFO: Reviewing 2 samples, if data is large, it may take a while.
+2026-01-12 10:32:33 - evalscope - INFO: Reviewing[general_mcq@example]:  100%| 2/2 [Elapsed: 00:00 < Remaining: 00:00, 288.34it/s]
+2026-01-12 10:32:33 - evalscope - INFO: Finished reviewing subset: example. Total reviewed: 2
+2026-01-12 10:32:33 - evalscope - INFO: Aggregating scores for subset: example
+2026-01-12 10:32:33 - evalscope - INFO: Evaluating [general_mcq] 100%| 1/1 [Elapsed: 00:00 < Remaining: 00:00, 29.68subset/s]
+2026-01-12 10:32:33 - evalscope - INFO: Generating report...
+2026-01-12 10:32:33 - evalscope - INFO: 
+general_mcq report table:
++---------+-------------+----------+----------+-------+---------+---------+
+| Model   | Dataset     | Metric   | Subset   |   Num |   Score | Cat.0   |
++=========+=============+==========+==========+=======+=========+=========+
+| mockllm | general_mcq | mean_acc | example  |     2 |     0.5 | default |
++---------+-------------+----------+----------+-------+---------+---------+ 
+
+2026-01-12 10:32:33 - evalscope - INFO: Skipping report analysis (`analysis_report=False`).
+2026-01-12 10:32:33 - evalscope - INFO: Dump report to: ./outputs/20260112_103233/reports/mockllm/general_mcq.json 
+
+2026-01-12 10:32:33 - evalscope - INFO: Benchmark general_mcq evaluation finished.
+2026-01-12 10:32:33 - evalscope - INFO: Overall report table: 
++---------+-------------+----------+----------+-------+---------+---------+
+| Model   | Dataset     | Metric   | Subset   |   Num |   Score | Cat.0   |
++=========+=============+==========+==========+=======+=========+=========+
+| mockllm | general_mcq | mean_acc | example  |     2 |     0.5 | default |
++---------+-------------+----------+----------+-------+---------+---------+ 
+
+2026-01-12 10:32:33 - evalscope - INFO: Finished evaluation for mockllm on ['general_mcq']
+2026-01-12 10:32:33 - evalscope - INFO: Output directory: ./outputs/20260112_103233

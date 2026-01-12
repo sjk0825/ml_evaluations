@@ -1,0 +1,87 @@
+analysis_report: false
+api_url: null
+chat_template: null
+dataset_args:
+  general_mcq:
+    aggregation: mean
+    dataset_id: ./data/data_ver1.jsonl
+    default_subset: default
+    description: A general multiple-choice question answering dataset for custom evaluation.
+      For detailed instructions on how to use this benchmark, please refer to the
+      [User Guide](https://evalscope.readthedocs.io/en/latest/advanced_guides/custom_dataset/llm.html#mcq).
+    eval_split: val
+    extra_params: {}
+    few_shot_num: 0
+    few_shot_prompt_template: null
+    few_shot_random: false
+    filters: null
+    force_redownload: false
+    metric_list:
+    - acc
+    name: general_mcq
+    output_types:
+    - generation
+    pretty_name: General-MCQ
+    prompt_template: '回答下面的单项选择题，请选出其中的正确答案。你的回答的全部内容应该是这样的格式："答案：[LETTER]"（不带引号），其中
+      [LETTER] 是 {letters} 中的一个。
+
+
+      问题：{question}
+
+      选项：
+
+      {choices}
+
+      '
+    query_template: null
+    review_timeout: null
+    sandbox_config: {}
+    shuffle: false
+    shuffle_choices: false
+    subset_list:
+    - example
+    system_prompt: null
+    tags:
+    - MCQ
+    - Custom
+    train_split: dev
+dataset_dir: /root/.cache/modelscope/hub/datasets
+dataset_hub: modelscope
+datasets:
+- general_mcq
+debug: false
+eval_backend: Native
+eval_batch_size: 1
+eval_config: null
+eval_type: llm_ckpt
+evalscope_version: 1.4.1
+generation_config:
+  batch_size: 1
+  do_sample: false
+  max_tokens: 2048
+  n: 1
+  temperature: 1.0
+  top_k: 50
+  top_p: 1.0
+ignore_errors: false
+judge_model_args: {}
+judge_strategy: auto
+judge_worker_num: 1
+limit: null
+model: MockLLM
+model_args:
+  precision: torch.float16
+  revision: master
+model_id: mockllm
+model_task: text_generation
+no_timestamp: false
+repeats: 1
+rerun_review: false
+sandbox_manager_config: {}
+sandbox_type: docker
+seed: 42
+stream: null
+timeout: null
+use_cache: null
+use_sandbox: false
+work_dir: ./outputs/20260112_103233
