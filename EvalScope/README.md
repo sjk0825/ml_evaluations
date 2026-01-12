@@ -15,5 +15,5 @@ $ (evalscope_env) python evaluation.py
 
 ### View visualization
 ```
-$ (evalscope_env) evalscope app # 0.0.0.0:7860
+$ (evalscope_env) evalscope app --lang en # 0.0.0.0:7860
 ```
