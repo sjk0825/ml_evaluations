@@ -1,0 +1,20 @@
+work_dir: "outputs"
+eval_backend: "RAGEval"
+eval_config:
+  tool: "MTEB"
+  model:
+    - model_name_or_path: "sentence-transformers/all-MiniLM-L6-v2"
+      pooling_mode: null        # load from model config
+      max_seq_length: 512
+      prompt: ""
+      model_kwargs:
+        torch_dtype: "auto"
+      encode_kwargs:
+        batch_size: 2
+  eval:
+    tasks:
+      - "CustomRetrieval"
+    dataset_path: "data/retrieval"
+    verbosity: 2
+    overwrite_results: true
+    limits: 500
