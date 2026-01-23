@@ -1,3 +1,9 @@
 evalscope
 evalscope[app]
 evalscope[rag]
+apted
+distance
+Polygon
+zss
+OmniDocBench
+#pip install --upgrade pandas

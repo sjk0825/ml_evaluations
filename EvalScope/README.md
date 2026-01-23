@@ -12,6 +12,7 @@ $ (evalscope_env) pip install -r requirements.txt
 $ (evalscope_env) cd EvalScope
 $ (evalscope_env) python evaluation_mQA.py
 $ (evalscope_env) python evaluation_retrieval.py
+$ (evalscope_env) python evaluation_ocr.py
 ```
 
 ### View visualization
